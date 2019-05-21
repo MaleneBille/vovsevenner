@@ -1,0 +1,13 @@
+body{
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: white;
+    font-size: var(--font-size-text);
+    color: var(--font-color-text);
+    line-height: 1.4;
+    font-family: var(--font-family-text);
+}
+h1 {
+    font-family: var(--font-family-text);
+    text-align: center;  
+}

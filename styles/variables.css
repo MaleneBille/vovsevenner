@@ -1,0 +1,9 @@
+:root {
+    --color-primary: #788e9a;
+    --color-secondary: #ced8db;
+    --color-secondary-light: #e0f0ef;
+    --font-family-heading: 'Pacifico', cursive;
+    --font-family-text: 'Poiret One', cursive;
+    --font-size-text: 15px;
+    --color-text: #222222;
+}

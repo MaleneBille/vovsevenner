@@ -1,0 +1,77 @@
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.top-nav ul {
+    display: flex;
+    letter-spacing: 2px;
+    font-size: 15px;
+    list-style: none;
+    min-width: 60%;
+    justify-content: space-between;
+}
+
+.top-nav li {
+    padding: 15px;
+    position: relative;
+}
+
+.top-nav a {
+    text-decoration: none;
+    font-family: var(--font-family-text);
+    font-weight: 800;
+    font-size: 15px;
+    color: white;
+}
+
+#main-content .wpsm_nav-tabs {
+    display: flex;
+    justify-content: center;
+}
+
+#main-content ul.wpsm_nav-tabs > li > a,
+#main-content ul.wpsm_nav-tabs > li > a:hover, 
+#main-content ul.wpsm_nav-tabs > li > a:focus
+#main-content ul.wpsm_nav-tabs.wpsm_nav-tabs > li.active > a, 
+#main-content ul.wpsm_nav-tabs.wpsm_nav-tabs > li.active > a:hover, 
+#main-content ul.wpsm_nav-tabs.wpsm_nav-tabs > li.active > a:focus {
+border: none !important;
+}
+
+/* .sub-nav {
+    padding: 0;
+    margin-left: 0;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: bold;
+} */
+
+/* Logo */
+.top-nav img {
+    height: 80px;
+}
+
+/* The dropdown */
+.sub-menu {
+    position: absolute;
+	flex-direction: column;
+	margin: 0;
+    background-color: var(--color-primary);
+    width: 100%;
+    left: 3px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    height: 0;
+}
+.sub-menu.show {
+    opacity: 1;
+    height: auto;
+}

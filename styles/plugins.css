@@ -1,0 +1,33 @@
+.catlist {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-family: var(--font-family-text);
+    font-size: 20px;
+    margin: 0 -15px;
+    padding: 0;
+}
+
+.catlist li {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    margin-bottom: 30px;
+    
+}
+
+.catlist li a {
+    background-color: var(--color-secondary);
+    padding: 25px;
+    text-align: center;
+}
+
+.catlist li img {
+    width: auto;
+    max-height: 250px;
+}

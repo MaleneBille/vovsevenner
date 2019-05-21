@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Box-style for front-page */
+
+.box-horizontal {
+    background-color: var(--color-secondary-light);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.box-horizontal a {
+    text-decoration: none;
+}
+.box-horizontal img {
+    max-width: 100%;
+    height: auto;
+}
+.box-horizontal h2 {
+    text-align: center
+}
+
+/* Post images and text */
+
+.post-images img {
+    height: 200px;
+    border: 5px solid var(--color-secondary);
+    padding: 5px;
+}
+
+.post-images a {
+    display: flex;
+    justify-content: center;
+}
+
+.post-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.content-area{
+    display: flex;
+    text-align: center;
+}
+
+.post-content-area {
+    font-family: var(--font-family-text);
+    font-size: 15px;
+}
