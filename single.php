@@ -1,74 +1,76 @@
 <?php get_header(); ?>
 
-	<main>
+<main>
 	<div class="container">
-        <div class="row">
+		<div class="row">
 			<div class="col-12">
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-		<!-------------------------------------------------------------------------------------
+					<!-------------------------------------------------------------------------------------
 		 HER KAN JEG SÆTTE DIV OM FEKS THUMBNAIL, GIVE DEN EN KLASSE OG EFTERFØLGENDE STYLE I COMPONENTS.CSS.
 		 DENNE THUMBNAIL BERØRER IKKE IMG PÅ PLUGINS OG FRONT-PAGE, DA DET HAR EN SPECIFIK KLASSE TIL POSTS. 
 		-------------------------------------------------------------------------------------->
 
-			<!-- post thumbnail -->
-			<div class="post-images">
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			</div>
-			</div>
-			<!-- /post thumbnail -->
-
-			<!------------------------------------------------------------------------------- 
-			POST TITLE	
+					<!------------------------------------------------------------------------------- 
+			POST THUMBNAIL
+			Denne er midlertidigt udkommenteret. Kan hentes i originalt temas single.php.	
 		    ---------------------------------------------------------------------------------->
 
-			<!-- post title -->
-			<h1>
+					<!------------------------------------------------------------------------------- 
+			POST TITLE (tITEL PÅ POSTS)	
+		    ---------------------------------------------------------------------------------->
+
+					<!-- post title -->
+					<div class="post-title">
+						<h1>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 			</h1>
-			<!-- /post title -->
+					
+					</div>
+					<!-- /post title -->
 
-            <!------------------------------------------------------------------------------- 
-			CONTENT AREA	
+					<!------------------------------------------------------------------------------- 
+			CONTENT AREA (BOOTSTRAP PÅ DE ENKELTE SIDER)	
 		    ---------------------------------------------------------------------------------->
-			<div class="row">
-			<div class="col-8 offset-2 offset-2 content-area">
-			<div class="post-content-area">	
-			<?php the_content(); // Dynamic Content ?>
-			</div>
-			</div>
-			</div>
-			
-			<!------------------------------------------------------------------------------- 
-			POST DETAILS	
-		    ---------------------------------------------------------------------------------->	
+					<div class="row">
+						<div class="col-8 offset-2 offset-2 content-area">
+							<div class="post-content-area">
+								<?php the_content(); // Dynamic Content ?>
+							</div>
+						</div>
+					</div>
 
-			<div class="post-details">
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-			
-			<!-- Author, comments etc. er foreløbig slettet, men vi kan kopiere php ind fra det originale tema, hvis det er vi har brug for det alligevel -->
-			</div>
+					<!------------------------------------------------------------------------------- 
+			POST DETAILS (F.EKS AUTHOR, KOMMENTARER, DATO)	
+		    ---------------------------------------------------------------------------------->
 
-			
-		
+					<div class="post-details">
+						<span class="date">
+							<?php the_time('F j, Y'); ?>
+							<?php the_time('g:i a'); ?>
+						</span>
+						<p>
+							<?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?>
+						</p>
+						<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
-	<?php endwhile; ?>
+						<!-- Author, comments etc. er foreløbig slettet, men vi kan kopiere php ind fra det originale tema, hvis det er vi har brug for det alligevel -->
+					</div>
 
-	<?php endif; ?>
+
+
+
+					<?php endwhile; ?>
+
+					<?php endif; ?>
 
 				</div>
 			</div>
-		</div>	
-	</main>
+		</div>
+</main>
 
 <?php get_footer(); ?>
