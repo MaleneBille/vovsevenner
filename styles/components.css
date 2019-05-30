@@ -4,46 +4,50 @@
 /* Box-style for front-page */
 
 .box-horizontal {
-    background-color: var(--color-secondary-light);
-    padding: 20px;
-    margin-bottom: 20px;
+	background-color: var(--color-secondary-light);
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 .box-horizontal a {
-    text-decoration: none;
+	text-decoration: none;
+	font-family: var(--font-family-text);
 }
 .box-horizontal img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 .box-horizontal h2 {
-    text-align: center
+	text-align: center
 }
-
 /* Post images and text */
-
 .post-images img {
-    height: 200px;
-    border: 5px solid var(--color-secondary);
-    padding: 5px;
+	height: 200px;
+	border: 5px solid var(--color-secondary);
+	padding: 5px;
 }
+/* Posts */
 
 .post-images a {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
-
+.post-title h1 a {
+	font-size: 40px;
+	color: #444;
+	letter-spacing: 1.5px;
+}
 .post-details {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: baseline;
 }
-
-.content-area{
-    display: flex;
-    text-align: center;
+.content-area {
+	display: flex;
+	text-align: center;
 }
-
 .post-content-area {
-    font-family: var(--font-family-text);
-    font-size: 15px;
+	font-family: var(--font-family-text);
+	font-size: 15px;
 }

@@ -1,0 +1,7 @@
+.footer {
+	margin-top: 50px;
+	padding: 10px;
+	background-color: var(--color-secondary-light);
+	font-family: var(--font-family-text);
+	text-align: center;
+}

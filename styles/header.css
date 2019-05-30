@@ -1,7 +1,9 @@
+/* Header, som indeholder navigation, logo og søgefunktion */
+
 header {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    background-color: var(--color-primary);
-    margin-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	background-color: var(--color-primary);
+	margin-bottom: 40px;
 }

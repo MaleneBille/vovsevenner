@@ -1,0 +1,9 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+video {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 40px;
+}

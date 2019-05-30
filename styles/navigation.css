@@ -1,77 +1,175 @@
+/* Navigation */
+
 .top-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
 .top-nav ul {
-    display: flex;
-    letter-spacing: 2px;
-    font-size: 15px;
-    list-style: none;
-    min-width: 60%;
-    justify-content: space-between;
+	display: flex;
+	letter-spacing: 2px;
+	font-size: 15px;
+	list-style: none;
+	min-width: 60%;
+	justify-content: space-between;
 }
-
 .top-nav li {
-    padding: 15px;
-    position: relative;
+	padding: 15px;
+	position: relative;
 }
-
 .top-nav a {
-    text-decoration: none;
-    font-family: var(--font-family-text);
-    font-weight: 800;
-    font-size: 15px;
-    color: white;
+	text-decoration: none;
+	font-family: var(--font-family-text);
+	font-weight: 800;
+	font-size: 15px;
+	color: white;
+}
+.toogle-menu {
+	display: none;
 }
 
-#main-content .wpsm_nav-tabs {
-    display: flex;
-    justify-content: center;
+@media only screen and (max-width: 850px) {
+.toogle-menu {
+	display: block;
+	background-color: var(--color-primary);
+	font-family: var(--font-family-text);
+	color: white;
+	border-style: none;
+	z-index: 150;
+}
+.top-nav {
+	padding-right: 0;
+	padding-left: 0;
+}
+.top-nav ul {
+	display: none;
+	flex-direction: column;
+}
+.top-nav ul.open {
+	position: fixed;
+	display: flex;
+	top: 0;
+	left: 0;
+	margin-top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--color-primary);
+	padding: 30px 50px;
+	z-index: 100;
+	overflow: auto;
+}
+.toggle-menu.open {
+	background-color: transparent;
+	z-index: 150;
+}
+.menu-button {
+	height: 50px;
+	padding: 10px;
+}
+.open-menu .menu-button.close {
+	display: none;
+}
+.open-menu .menu-button.open {
+	display: block;
+}
+.menu-button.close {
+	display: block;
+}
+.menu-button.open {
+	display: none;
+}
+}
+/* Søgefunktion */
+
+.search-toggle {
+	background-color: var(--color-primary);
+	font-family: var(--font-family-text);
+	color: white;
+	border-style: none;
+}
+.search-button {
+	height: 80px;
+	padding: 25px;
 }
 
-#main-content ul.wpsm_nav-tabs > li > a,
-#main-content ul.wpsm_nav-tabs > li > a:hover, 
-#main-content ul.wpsm_nav-tabs > li > a:focus
-#main-content ul.wpsm_nav-tabs.wpsm_nav-tabs > li.active > a, 
-#main-content ul.wpsm_nav-tabs.wpsm_nav-tabs > li.active > a:hover, 
-#main-content ul.wpsm_nav-tabs.wpsm_nav-tabs > li.active > a:focus {
-border: none !important;
+@media only screen and (max-width: 850px) {
+.search-button {
+	height: 50px;
+	padding: 10px;
 }
+}
+.search-form {
+	display: none;
+}
+.search-form.open {
+	display: block;
+	font-family: var(--font-family-text);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.search-form form {
+	display: flex;
+	justify-content: space-between;
+}
+.search-form input {
+	flex-grow: 2;
+	padding: 10px 25px;
+	font-size: 16px;
+	border: none;
+}
+.search-submit {
+	border: none;
+	background-color: var(--color-secondary-light);
+	font-size: 16px;
+	padding-left: 45px;
+	padding-right: 45px;
+}
+/* Søgesiden */
 
-/* .sub-nav {
-    padding: 0;
-    margin-left: 0;
-    text-decoration: none;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    font-family: var(--font-family-text);
-    font-size: 15px;
-    font-weight: bold;
-} */
-
+.search-result article {
+	margin-bottom: 25px;
+	padding-bottom: 25px;
+	border-bottom: solid 1px var(--color-secondary-light);
+	font-size: 14px;
+}
+.search-result h2 a {
+	font-size: 20px;
+	font-family: var(--font-family-text);
+}
+.pagination {
+	font-size: 16px;
+	text-align: center;
+}
 /* Logo */
-.top-nav img {
-    height: 80px;
+.logo img {
+	height: 80px;
 }
 
+@media only screen and (max-width: 850px) {
+.logo {
+	flex-grow: 2;
+}
+.logo img {
+	height: 50px;
+	margin: 5px;
+}
+}
 /* The dropdown */
-.sub-menu {
-    position: absolute;
+.children {
+	position: absolute;
 	flex-direction: column;
 	margin: 0;
-    background-color: var(--color-primary);
-    width: 100%;
-    left: 3px;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    height: 0;
+	background-color: var(--color-primary);
+	width: 100%;
+	left: 3px;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	height: 0;
 }
-.sub-menu.show {
-    opacity: 1;
-    height: auto;
+.children.show {
+	opacity: 1;
+	height: auto;
 }
