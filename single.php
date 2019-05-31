@@ -54,7 +54,7 @@
 							<?php the_time('g:i a'); ?>
 						</span>
 						<p>
-							<?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?>
+							<?php _e( 'Kategoriseret under: ', 'html5blank' ); the_category(', '); // Separated by commas ?>
 						</p>
 						<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
