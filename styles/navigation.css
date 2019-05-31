@@ -122,7 +122,8 @@
 }
 .search-submit {
 	border: none;
-	background-color: var(--color-secondary-light);
+	background-color: var(--color-secondary-dark);
+	color: white;
 	font-size: 16px;
 	padding-left: 45px;
 	padding-right: 45px;
@@ -132,7 +133,7 @@
 .search-result article {
 	margin-bottom: 25px;
 	padding-bottom: 25px;
-	border-bottom: solid 1px var(--color-secondary-light);
+	border-bottom: solid 1px var(--color-secondary);
 	font-size: 14px;
 }
 .search-result h2 a {
